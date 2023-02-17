@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="beer-cards-container" *ngIf="beers?.length; else loading">
+  <app-beer-card></app-beer-card>
+</div>
+
+<ng-template #loading>
+  <p class="loading">Loading...</p>
+</ng-template>
