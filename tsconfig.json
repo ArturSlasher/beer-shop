@@ -28,8 +28,9 @@
       "*": [
           "./node_modules/tns-core-modules/*",
           "./node_modules/*",
-          "src/*"
-      ]
+          "src/*",
+      ],
+      "tslib" : ["./node_modules/tslib/tslib.d.ts"]
     }
   },
   "angularCompilerOptions": {

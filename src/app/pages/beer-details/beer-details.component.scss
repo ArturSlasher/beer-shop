@@ -4,7 +4,20 @@
   justify-content: space-around;
   align-items: center;
   gap: 8rem;
-  margin: 8rem;
+  margin: 10rem;
+}
+
+.back-to-catalog {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  border-radius: 40px;
+  border: 2px solid black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
 }
 
 .buy-button {

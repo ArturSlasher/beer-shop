@@ -2,7 +2,6 @@ import { Component, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { BeerService } from '../../services/beer.service';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

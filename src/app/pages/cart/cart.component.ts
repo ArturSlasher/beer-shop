@@ -8,13 +8,11 @@ import { BeerService } from 'app/services/beer.service';
 })
 export class CartComponent {
 
-  cartBeers$ = this.beerService.getCartBeers();
+  cartBeers$ = this.beerService.cartBeers$;
 
   constructor(
     private beerService: BeerService
-  ) {
-    console.log(this.cartBeers$?.length)
-  }
+  ) { }
 
   removeFromCart(beer: string) {
     this.beerService.removeFromCart(beer);

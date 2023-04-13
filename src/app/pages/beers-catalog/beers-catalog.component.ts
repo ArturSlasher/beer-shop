@@ -9,8 +9,6 @@ import { BeerService } from 'app/services/beer.service';
 })
 export class BeersCatalogComponent {
 
-  @ViewChild("test-image") placeImage!: HTMLElement;
-
   constructor(
     private beerService: BeerService
   ) {}
@@ -22,11 +20,6 @@ export class BeersCatalogComponent {
   }
 
   ngAfterViewInit() {
-    console.log(this.placeImage)
-
-    this.placeImage.onclick = () => {
-      console.log(this.placeImage)
-    };
-}
+  }
 
 }
