@@ -1,16 +1,15 @@
 <app-header></app-header>
-<button class="back-to-catalog" routerLink="../../catalog">Back to catalog</button>
-<div class="flex-container" *ngIf="details; else_loading">
-  <div class="text-container">
+<div class="flex-container d-flex flex-nowrap justify-content-around align-items-center align-self-center w-100 bg-light mt-5" style="height:90vh" *ngIf="details; else_loading">
+  <div class="text-container w-50">
     <h1> {{details.name}} </h1>
     <h3> {{details.tagline}} </h3>
     <p><i> First brewed: {{details.first_brewed}} </i></p>
     <p> {{details.description}} </p>
     <p> Food pairing: {{details.food_pairing}} </p>
     <p> Volume: {{details.volume.value}} {{details.volume.unit}} </p>
-    <button (click)="addToCart(details.name)" class="buy-button">Buy for: {{details.ibu}} $</button>
+    <button (click)="addToCart(details.name)" class="btn btn-lg btn-success" type="submit">Buy for: {{details.ibu}} $</button>
   </div>
-  <img class="image" src="{{details.image_url}}">
+  <img class="beer-img" src="{{details.image_url}}">
 </div>
 
 <ng-template #loading>

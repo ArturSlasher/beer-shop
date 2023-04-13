@@ -1,4 +1,4 @@
-<div class="beer-card" *ngFor="let beer of beers" routerLink="{{beer.id}}">
-  <h3>{{ beer.name }}</h3>
-  <img class="image" src="{{beer.image_url}}">
+<div *ngFor="let beer of beers" routerLink="{{beer.id}}" class="beer-card d-inline-block w-25 m-4 p-4 bg-light text-center border border-dark rounded shadow">
+  <h3 class="beer-card-title">{{ beer.name }}</h3>
+  <img class="beer-card-img my-4" style="height:25vh" src="{{beer.image_url}}">
 </div>

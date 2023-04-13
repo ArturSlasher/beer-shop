@@ -1,4 +1,4 @@
-<div class="header">
-  <h1 class="total-beers"> Total beers in our store: {{beers.length}}</h1>
-  <button class="cart-amount" (click)="goToCart();"> Cart amount: {{cartBeers$.value.length}}</button>
-</div>
+<nav class="navbar d-flex justify-content-around fixed-top navbar-expand-lg navbar-light bg-light">
+  <h1 class="total-beers">Total beers in our store: {{beers.length}}</h1>
+  <button class="btn btn-lg btn-dark" type="button" (click)="goToCart();">Cart amount: {{cartBeers$.value.length}}</button>
+</nav>

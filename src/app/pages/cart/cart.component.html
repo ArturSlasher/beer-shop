@@ -1,12 +1,11 @@
 <app-header></app-header>
-<button class="back-to-catalog" routerLink="../catalog">Back to catalog</button>
-<div class="cart-container" *ngIf="cartBeers$.value.length; else empty">
-  <div class="beer-cart" *ngFor="let beer of cartBeers$.value">
+<div class="cart-container d-flex flex-wrap justify-content-center mt-5 bg-light" *ngIf="cartBeers$.value.length; else empty">
+  <div class="beer-cart d-inline-block w-25 m-4 p-4 bg-light text-center border border-dark rounded shadow" *ngFor="let beer of cartBeers$.value">
     <h3>{{ beer }}</h3>
-    <button class="remove-button" (click)="removeFromCart(beer)">remove</button>
+    <button class="remove-button btn btn-lg btn-danger mt-4" (click)="removeFromCart(beer)">remove</button>
   </div>
 </div>
 
 <ng-template #empty>
-  <p class="empty">Your cart is empty</p>
+  <h1 class="m-5 p-5">Your cart is empty</h1>
 </ng-template>
